@@ -1,0 +1,9 @@
+language: csharp
+notifications:
+  webhooks: https://tomacheese.com/tomachi/travisci_notice_book000.php
+script:
+  - xbuild /p:Configuration=Debug iLyric.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore iLyric.sln
